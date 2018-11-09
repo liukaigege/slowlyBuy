@@ -1,0 +1,250 @@
+/* 进行样式初始化, 完成浏览器的样式统一 */
+
+@import "normalize";
+/* 在normalize重置完的基础上, 重置ul,li list-style等我们不需要的样式,
+   并且还添加一些我们自定义的 样式类 (clearfix, .fl, .fr)
+*/
+
+@import "base";
+/*
+  进行 rem 布局:
+  1. 使用 rem 为单位
+  2. 动态设置不同屏幕 html font-size
+*/
+
+@design: 750; // 设计图尺寸
+@base: @design / 10; // 基准值
+.mm_cotainer {
+  padding-top: 50rem/@base;
+  height: 100%;
+  width: 100%;
+  background-color: #F1F1F1;
+  position: relative;
+  .mm_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ff841d;
+    height: 50rem/@base;
+    width: 100%;
+    a {
+      height: 100%;
+      display: block;
+      &.logo_left {
+        padding: 12rem/@base;
+        float: left;
+        overflow: hidden;
+        img {
+          height: 25rem/@base;
+          width: auto;
+        }
+      }
+      &.logo_right {
+        float: right;
+        height: 50rem/@base;
+        width: 50rem/@base;
+        img {
+          // display: inline-block;
+          height: 34rem/@base;
+          width: 34rem/@base;
+          margin: 8rem/@base;
+        }
+      }
+    }
+  }
+  .mm_search {
+    width: 100%; // padding-right: 70rem/@base;
+    background-color: #fff; // position: relative;
+    padding: 10px;
+    #form {
+      position: relative;
+      padding-right: 70rem/@base;
+      line-height: 30rem/@base;
+      height: 30rem/@base;
+      input {
+        height: 30rem/@base;
+        line-height: 30rem/@base;
+        &.input_search {
+          width: 100%; // float: left;
+          // overflow: hidden;
+          // padding-right: 50rem/@base;
+          padding-left: 20rem/@base;
+          -webkit-appearance: none; // border: none;
+          border-radius: 31px;
+          background-color: #F1F1F1;
+          color: #929292;
+          font-size: 13rem/@base;
+          box-sizing: border-box;
+          vertical-align: top; // overflow: hidden;
+        }
+        &.input_button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 63rem/@base;
+          background-color: #FF841D;
+          border: none;
+          color: #fff;
+          border-radius: 31px;
+          font-size: 16rem/@base;
+        }
+      }
+    }
+  } // 导航部分
+  .mm_nav {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px 0;
+    li {
+      float: left;
+      width: 25%;
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13rem/@base;
+      transition: transform 1s;
+      &.active {
+        transition: none;
+        transform: scale(0);
+        height: 0;
+      }
+      img {
+        width: 50rem/@base;
+        height: 50rem/@base;
+        margin: 0 auto;
+      }
+      p {
+        margin-top: 5px;
+      }
+    }
+  } // 内容部分
+  .mm_content {
+    padding-top: 5px;
+    color: #fff;
+    background-color: #F1F1F1;
+    margin-bottom: 15px; // 内容头部
+    .mm_content_footer,
+    .mm_content_header {
+      height: 35rem/@base;
+      background-color: #FF841D;
+      padding-left: 10px;
+      border-bottom: solid 1px #ffc881;
+      line-height: 35rem/@base;
+      p {
+        float: left;
+        font-weight: normal;
+        font-size: 16rem/@base;
+      }
+      a {
+        float: right;
+        width: 40rem/@base;
+        height: 35rem/@base;
+        img {
+          margin: 7px auto;
+          height: 20rem/@base;
+          width: 20rem/@base;
+        }
+      }
+    } // 内容列表
+    .mm_content_list {
+      li {
+        padding: 14px 8px;
+        float: left;
+        width: 100%;
+        font-size: 15rem/@base;
+        border-bottom: 1px solid #EAEAEA;
+        background-color: #fff;
+        a {
+          display: block;
+          height: 129rem/@base;
+          padding-left: 100rem/@base;
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100rem/@base;
+            width: 100rem/@base;
+          }
+          .list_right {
+            padding-left: 10px;
+            float: left;
+            width: 100%;
+            .topP {
+              margin-bottom: 40rem/@base;
+              span {
+                color: #ff6c00;
+              }
+            }
+            .botP {
+              position: relative;
+              color: #A1A1A1;
+              font-size: 12px;
+              margin-bottom: 20rem/@base;
+              span {
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    } // 更多内容
+    .mm_content_more {
+      a {
+        margin: 10px;
+        font-size: 13rem/@base;
+        display: block;
+        text-align: center;
+        height: 32rem/@base;
+        line-height: 32rem/@base;
+        background-image: linear-gradient(#ffffff, #f4f4f4);
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        color: #666;
+      }
+    }
+  } // 底部部分
+  .mm_footer {
+    color: #666;
+    ul {
+      width: 100%;
+      border-top: 1px solid #c4c4c4;
+      border-bottom: 1px solid #c4c4c4;
+      background-color: #F1F1F1;
+      li {
+        height: 34rem/@base;
+        float: left;
+        width: 30%;
+        text-align: center;
+        line-height: 34rem/@base;
+        font-size: 15px;
+        border-right: 1px solid #c4c4c4;
+        a {
+          display: block;
+        }
+        &:last-child {
+          width: 40%;
+          img {
+            width: 15rem/@base;
+            height: 15rem/@base;
+            display: inline; // vertical-align: middle;
+            margin-top: -5px;
+            margin-right: 2px;
+            border: none;
+          }
+        }
+      }
+    }
+    .f_footer {
+      background-color: #efefef;
+      text-align: center;
+      font-size: 12rem/@base;
+      padding: 15px 0;
+      .app {
+        color: red;
+      }
+    }
+  }
+  
+}

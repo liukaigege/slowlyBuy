@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/gsproduct.css">
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <title>Document</title>
+
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+  <div class="mm_cotainer">
+    <!-- 头部 -->
+    <div class="mm_header">
+      <a href="javascript:history.go(-1);" class="logo_left "> <i class="fa fa-angle-left"></i></a>
+      <h3>凑单品</h3>
+      <a href="javascript:;" class="logo_right"><img src="./img/header_app.png" alt=""></a>
+    </div>
+
+
+
+
+    <!-- 内容部分 -->
+    <div class="mm_content">
+
+      <div class="hd">
+        <div class="filter">
+          <ul class="clearfix">
+            <li class="on">
+              <a class="shop jd">
+                京东
+                <i class="fa fa-unsorted"></i>
+              </a>
+              <div id="shop" class="popsort popbox">
+                <ul>
+                  <li>
+                    <a href="">
+                      京东
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+            <li class="on">
+              <a class="shop north">
+                华北
+                <i class="fa fa-unsorted"></i>
+              </a>
+            </li>
+            <li class="on">
+              <a class="shop">
+                全部价格
+                <i class="fa fa-unsorted"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="search">
+          <a href="javascript:;">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+
+
+        <div id="shop" class="popsort popbox">
+          <ul>
+            <li>
+              <a href="">
+                京东
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+
+      </div>
+
+      <div class="bd gs-product-list">
+        <ul id="container" class="masonry" style="position: relative">
+          <li>
+            <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="item border-img">
+
+              <div class="pic">
+                <img src="./img/product.jpg" style="width: 174px; height: 174px;">
+              </div>
+
+              <div class="title">
+                【东东日租卡】中国联通 北京 手机卡 电话 手机号卡（合约专用不可单独购买）
+              </div>
+
+              <div class="other">
+                <div class="price">¥1.00</div>
+                <div class="btn">去凑单</div>
+              </div>
+
+            </a>
+          </li>
+
+
+
+        </ul>
+        <div class="clearfix">
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- 底部部分 -->
+    <div class="mm_footer">
+      <ul class="clearfix">
+        <li width=30%><a href="javascript:;">登录</a></li>
+        <li width=30%><a href="javascript:;">注册</a></li>
+        <li width=40%><a href="#"><img src="./img/top.jpg" alt="">返回顶部
+          </a></li>
+      </ul>
+      <div class="f_footer">
+        <p><a href="" class="app">手机APP下载</a> <a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+<script type="text/html" id="gsproductTmp">
+  {{each result v i}}
+     <li>
+      <a href="javascript:;" data-shopid="{{v.shopId}}" data-areaid="">
+        {{v.shopName}}
+      </a>
+    </li>
+
+    {{/each}}
+
+</script>
+<script type="text/html" id="gsproductTpl">
+  {{each result v i}}
+     <li>
+      <a href="javascript:;"data-areaid="{{v.areaId}}" data-shopid="">
+        {{v.areaName}}
+      </a>
+    </li>
+
+    {{/each}}
+
+</script>
+
+
+<script type="text/html" id="gsListTmp">
+  {{each result v i}}
+  <li>
+      <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="item border-img">
+
+        <div class="pic">
+          <img src="{{v.productImg}}" style="width: 174px; height: 174px;">
+        </div>
+
+        <div class="title">
+          {{v.productName}}
+        </div>
+
+        <div class="other">
+          <div class="price">{{v.productPrice}}</div>
+          <div class="btn">去凑单</div>
+        </div>
+
+      </a>
+    </li>
+    {{/each}}
+
+</script>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<!-- <script src="./js/index.js"></script> -->
+<script src="./js/gsproduct.js"></script>
+
+
+</html>

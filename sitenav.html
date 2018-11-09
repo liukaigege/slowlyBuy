@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/sitenav.css">
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <title>Document</title>
+
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+  <div class="mm_cotainer">
+    <!-- 头部 -->
+    <div class="mm_header">
+      <a href="javascript:history.go(-1);" class="logo_left "> <i class="fa fa-angle-left"></i></a>
+      <h3>商城导航</h3>
+      <a href="javascript:;" class="logo_right"><img src="./img/header_app.png" alt=""></a>
+    </div>
+
+
+
+
+    <!-- 内容部分 -->
+    <div class="mm_content">
+      <ul class="clearfix">
+        <li>
+          <a href="">
+            <img src="./img/gengduo.png" alt="">
+            京东商城
+          </a>
+        </li>
+
+      </ul>
+
+
+
+    </div>
+
+
+    <!-- 底部部分 -->
+    <div class="mm_footer">
+      <ul class="clearfix">
+        <li width=30%><a href="javascript:;">登录</a></li>
+        <li width=30%><a href="javascript:;">注册</a></li>
+        <li width=40%><a href="#"><img src="./img/top.jpg" alt="">返回顶部
+          </a></li>
+      </ul>
+      <div class="f_footer">
+        <p><a href="" class="app">手机APP下载</a> <a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+<script type="text/html" id="sitenaveTmp">
+  {{each result v i}}
+    <li>
+      <a href="{{v.navHref}}">
+        <img src="{{v.navImg}}" alt="">
+        {{v.navTitle}}
+      </a>
+    </li>
+
+
+    {{/each}}
+
+</script>
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<!-- <script src="./js/index.js"></script> -->
+<script src="./js/sitenav.js"></script>
+
+
+</html>

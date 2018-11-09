@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <title>Document</title>
+
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+  <div class="mm_cotainer">
+    <!-- 头部 -->
+    <div class="mm_header">
+      <a href="javascript:history.go(-1);" class="logo_left "> <i class="fa fa-angle-left"></i></a>
+      <h3>省钱控 - 最新优惠</h3>
+      <a href="javascript:;" class="logo_right"><img src="./img/header_app.png" alt=""></a>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="mm_search">
+      <form id="form">
+        <input type="search" placeholder="请输入你想要比价的商品" class="input_search">
+        <input type="button" value="搜索" class="input_button">
+      </form>
+    </div>
+
+
+
+    <!-- 内容部分 -->
+    <div class="mm_content">
+      <!-- 内容头部 -->
+
+
+      <!-- 内容列表 -->
+      <div class="mm_content_list" id="mm_content_list">
+        <ul class="clearfix">
+          <li>
+            <a href="javascript:;">
+              <img src="./img/mnav.jpg" alt="">
+              <div class="list_right">
+                <p class="topP">双11预售：日本进口尤妮佳/Moony婴儿纸尿裤M64*3包<span>25元定金+185元尾款</span></p>
+                <p class="botP">天猫商城 | 10-25 13:57 <span>2</span></p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- 更多内容 -->
+      <div class="mm_content_more">
+        <ul class="clearfix">
+          <li><button class="btn prv_btn">上一页</button></li>
+          <li><select name="" id="sel">
+              <option value="1">1/15</option>
+            </select></li>
+          <li><button class="btn next_btn">下一页</button></li>
+        </ul>
+      </div>
+
+
+
+      <!-- 底部部分 -->
+      <div class="mm_footer">
+        <ul class="clearfix">
+          <li width=30%><a href="javascript:;">登录</a></li>
+          <li width=30%><a href="javascript:;">注册</a></li>
+          <li width=40%><a href="#"><img src="./img/top.jpg" alt="">返回顶部
+            </a></li>
+        </ul>
+        <div class="f_footer">
+          <p><a href="" class="app">手机APP下载</a> <a href="">慢慢买手机版</a> -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </div>
+
+    </div>
+</body>
+
+
+<!-- <script type="text/template" id="navTmp">
+  <ul class="clearfix">
+    {{each result v i}}
+      <li><a href="#"><img src="./img/{{v.img}}" alt="">
+          <p>{{v.name}}</p>
+        </a></li>
+    {{/each}}
+  </ul> -->
+  
+<!-- //渲染折扣页 -->
+<script type="text/template" id="listTmp">
+  <ul class="clearfix">
+      {{each result v i }}
+      <li>
+        <a href="#" data-id="{{v.productId}}">
+          {{#v.productImg2 }}
+          <div class="list_right">
+            <p class="topP">{{v.productName}}<span>{{v.productPinkage}}</span></p>
+            <p class="botP">{{v.productFrom}} | {{v.productTime}} <span>{{ v.productComCount.slice(1,2) }}</span></p>
+          </div>
+        </a>
+      </li> 
+      {{/each}}
+    </ul>
+  </script>
+
+
+
+<script type="text/html" id="currengeTmp">
+
+  {{each arr v i }}
+            <option value="{{i}}" {{ index === i ? "selected" : ""}} data-value = "{{arr.length}}">{{i+1}}/{{arr.length}}</option>
+       
+      {{/each}}
+  </script>
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<!-- <script src="./js/index.js"></script> -->
+<script src="./js/moneyctrl.js"></script>
+
+
+</html>

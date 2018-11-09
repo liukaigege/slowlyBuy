@@ -1,0 +1,120 @@
+@import "common";
+
+.mm_cotainer{
+  .mm_header{
+    text-align: center;
+    height: 50rem/@base;
+    padding-right: 50rem/@base ;
+    h3{
+      height: 50rem/@base;
+      text-align: center;
+      // display: inline;
+      font-size: 20rem/@base;
+      line-height: 50rem/@base;
+      color: #fff;
+    }
+    a{
+      position: relative;
+      i{
+        position: absolute;
+        top: 7rem/@base;
+        left: 15rem/@base;
+        font-size: 35rem/@base;
+      }
+      &.logo_left{
+        height: 50rem/@base;
+        width: 55rem/@base;
+        color: #fff;
+        font-weight: normal;
+      }
+      &.logo_right{
+        position: absolute;
+        height: 50rem/@base;
+        width: 50rem/@base;
+        top: 0;
+        right: 0;;
+        img{
+          // display: inline-block;
+          height: 34rem/@base;
+          width: 34rem/@base;
+          margin: 8rem/@base;
+        }
+      }
+    }
+  }
+}
+      // 内容列表
+.mm_content_list{
+  li{
+    padding: 14rem/@base 8rem/@base;  
+    float: left;
+    width: 100%;
+    font-size: 15rem/@base;
+    border-bottom: 1px solid #EAEAEA;
+    background-color: #fff;
+    a{
+      display: block;
+      height: 129rem/@base;
+      
+      padding-left: 100rem/@base;
+      position: relative;
+      img{
+        background-color: #daa520;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100rem/@base;
+        width: 100rem/@base;
+      }
+      .list_right{
+        padding-left: 10px;
+        float: left;
+        width: 100%;
+        .topP{
+          margin-bottom: 40rem/@base;
+          span{
+            color: #ff6c00;
+          }
+        }
+        .botP{
+          position: relative;
+          color: #A1A1A1;
+          margin-bottom: 20rem/@base;
+          font-size: 12rem/@base;
+          span{
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mm_content_more{
+  ul{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    li{
+      float: left;
+      width: 33.3%;
+      text-align: center;
+      .btn{
+        height: 33px;
+        width: 88px;
+        font-size: 14rem/@base;
+        border-radius: 4px;
+        border:none;
+        box-shadow: 0 0 1px #666;
+      }
+      #sel{
+        width: 95px;
+        height: 36px;
+        border: 1px solid rgb(186, 186, 186);
+        font-size: 16rem/@base;
+        padding: 8rem/@base 15rem/@base;
+      }
+    }
+  }
+}

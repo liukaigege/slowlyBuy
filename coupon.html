@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/coupon.css">
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <title>Document</title>
+
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+  <div class="mm_cotainer">
+    <!-- 头部 -->
+    <div class="mm_header">
+      <a href="javascript:history.go(-1);" class="logo_left "> <i class="fa fa-angle-left"></i></a>
+      <h3>优惠券</h3>
+      <a href="javascript:;" class="logo_right"><img src="./img/header_app.png" alt=""></a>
+    </div>
+
+
+
+
+    <!-- 内容部分 -->
+    <div class="mm_content">
+
+      <ul id="mm_contentUl" class="clearfix">
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <p></p>
+          </a>
+        </li>
+      </ul>
+
+
+
+    </div>
+
+
+    <!-- 底部部分 -->
+    <div class="mm_footer">
+      <ul class="clearfix">
+        <li width=30%><a href="javascript:;">登录</a></li>
+        <li width=30%><a href="javascript:;">注册</a></li>
+        <li width=40%><a href="#"><img src="./img/top.jpg" alt="">返回顶部
+          </a></li>
+      </ul>
+      <div class="f_footer">
+        <p><a href="" class="app">手机APP下载</a> <a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+<script type="text/html" id="couponTmp">
+  {{each result v i}}
+      <li>
+          <a href="{{v.couponLink}}?couponid={{v.couponId}}&name={{v.couponTitle}}">
+            <img src="{{v.couponImg}}" alt="">
+            <p>{{v.couponTitle}}</p>
+          </a>
+      </li>
+
+    {{/each}}
+
+</script>
+
+<!-- <script>
+  window.addEventListener("load", function () {
+    // 找对象
+    var ul = document.querySelector("#wrapper ul");
+    var lis = ul.children;
+    var liWidth = lis[0].offsetWidth; // 获取宽度
+
+    // 计算宽度设置给ul
+    ul.style.width = lis.length * liWidth + "px";
+
+    // 由于计算区域滚动的临界值, 需要进行计算, 要保证 子元素的宽度的准确性
+    // 默认是纵向的滚动, 要横向, 需要配置 scrollX, scrollY
+    new IScroll('#wrapper', {
+      scrollX: true,
+      scrollY: false
+    });
+  });
+</script> -->
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<!-- <script src="./js/index.js"></script> -->
+<script src="./js/coupon.js"></script>
+
+
+</html>

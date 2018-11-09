@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/category.css">
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <title>Document</title>
+
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+  <div class="mm_cotainer">
+    <!-- 头部 -->
+    <div class="mm_header">
+      <a href="javascript:;" class="logo_left"><img src="./img/header_logo.png" alt=""></a>
+      <a href="javascript:;" class="logo_right"><img src="./img/header_app.png" alt=""></a>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="mm_search">
+      <form id="form">
+        <input type="search" placeholder="请输入你想要比价的商品" class="input_search">
+        <input type="button" value="搜索" class="input_button">
+      </form>
+    </div>
+
+    <!-- 中间列表页 -->
+    <div id="category">
+        <div class="row clearfix">
+          <ul class="category-title">
+            <li>
+              <i class="fa fa-angle-down"></i>
+              <a href="#">大家电</a>
+              <ul class="category-content clearfix" style="display: none">
+                <li>
+                  <a href="#">电视</a>
+                </li>
+                <li>
+                  <a href="#">电视</a>
+                </li>
+                <li>
+                  <a href="#">电视</a>
+                </li>
+                <li>
+                  <a href="#">电视</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">大家电</a>
+              <ul class="category-content clearfix" >
+                <li>
+                  <a href="#">电视</a>
+                </li>
+                <li>
+                  <a href="#">电视</a>
+                </li>
+                <li>
+                  <a href="#">电视</a>
+                </li>
+                <li>
+                  <a href="#">电视</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+       </div>
+    </div>
+   
+
+
+
+
+    <!-- 底部部分 -->
+    <div class="mm_footer">
+      <ul class="clearfix">
+        <li width=30%><a href="javascript:;">登录</a></li>
+        <li width=30%><a href="javascript:;">注册</a></li>
+        <li width=40%><a href="#"><img src="./img/top.jpg" alt="">返回顶部
+          </a></li>
+      </ul>
+      <div class="f_footer">
+        <p><a href="" class="app">手机APP下载</a> <a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+
+<script type="text/html" id="categoryTmp">
+
+      <ul class="category-title">
+        {{each result v i}}
+          <li>
+            <i class="fa fa-angle-down"></i>
+            <a href="javascript:;" data-id= "{{v.titleId}}" class="categoryA">{{v.title}}</a>
+            <ul class="category-content clearfix" >
+              <li>
+                <a href="#">电视</a>
+              </li>
+            
+            </ul>
+          </li>
+        {{/each}}
+      </ul>
+</script>
+
+<script type="text/html" id="categoryTpl">
+  <ul class="category-content clearfix" >
+      {{each result v i}}
+      <li>
+        <a href="productlist.html?categoryid={{v.categoryId}}" data-id="{{v.categoryId}}">{{v.category}}</a>
+      </li>
+      {{/each}}
+    </ul>
+</script>
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+
+
+</html>

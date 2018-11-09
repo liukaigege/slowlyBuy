@@ -1,0 +1,72 @@
+@import "common";
+//公共模板部分
+.mm_cotainer {
+  .mm_header {
+    h3 {
+      height: 50rem/@base;
+      text-align: center;
+      font-size: 20rem/@base;
+      line-height: 50rem/@base;
+      color: #fff;
+    }
+    background-color: #ff841d;
+    text-align: center;
+    height: 50rem/@base;
+    padding-right: 50rem/@base ;
+    a {
+      position: relative;
+      i {
+        position: absolute;
+        top: 7rem/@base;
+        left: 15rem/@base;
+        font-size: 35rem/@base;
+      }
+      &.logo_left {
+        height: 50rem/@base;
+        width: 55rem/@base;
+        color: #fff;
+        font-weight: normal;
+      }
+      &.logo_right {
+        position: absolute;
+        height: 50rem/@base;
+        width: 50rem/@base;
+        top: 0;
+        right: 0;
+        img {
+          // display: inline-block;
+          height: 34rem/@base;
+          width: 34rem/@base;
+          margin: 8rem/@base;
+        }
+      }
+    }
+  }
+  .mm_footer ul {
+    margin-top: 25px;
+  } // 内容部分
+  .mm_content {
+    ul{
+      width: 300px;
+      margin: 10px auto;
+      li{
+        border:1px solid #bfbfbf;
+        float: left;
+        padding: 10px 8px;
+        margin: 0 0 5px 5px;  
+        a{
+          display: block;
+          font-size: 16px;
+          img{
+            margin-top: 2px;
+            margin-right: 5px;          
+            width: 16px;
+            height: 16px;
+            float: left;
+          }
+        }
+      }
+    }
+
+  }
+}

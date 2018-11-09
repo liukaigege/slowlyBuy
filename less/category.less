@@ -1,0 +1,50 @@
+@import "common";
+
+.row{
+  border-radius: 5px;
+  background: #ededed;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #666;
+  ul > li{
+    transition: all .3s; 
+    position: relative;
+    i{
+      position: absolute;
+      font-size: 25rem/@base;  
+      top:7px ;
+      right: 12px;
+    }
+    a {
+      height: 40rem/@base;
+      line-height: 40rem/@base;
+      color: #000;
+      font-size: 16rem/@base;
+      display: block;
+      padding-left: 16px;
+      border-bottom: 1px solid #ccc;
+      font-weight: bold;
+    }
+    .category-content{
+      background: #f9f9f9;
+      li{
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        width: 33.33%;
+        float: left;
+        text-align: center;
+        height: 40rem/@base;
+        line-height: 40rem/@base;
+        transition: all .3s;
+         a{
+          padding: 0;
+          display: block;
+          font-weight: normal;
+          width: 100%;
+          color: #333;
+        }
+     }
+
+    }
+  }
+}

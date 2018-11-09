@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/productlist.css">
+  <title>Document</title>
+
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+  <div class="mm_cotainer">
+    <!-- 头部 -->
+    <div class="mm_header">
+      <a href="javascript:;" class="logo_left"><img src="./img/header_logo.png" alt=""></a>
+      <a href="javascript:;" class="logo_right"><img src="./img/header_app.png" alt=""></a>
+    </div>
+
+    <!-- 搜索框 -->
+    <div class="mm_search">
+      <form id="form">
+        <input type="search" placeholder="请输入你想要比价的商品" class="input_search">
+        <input type="button" value="搜索" class="input_button">
+      </form>
+    </div>
+    <!-- ==============================分割线================================================ -->
+    <div class="product-list-title">
+      <div class="aList">
+        <a href="index.html" class="list-title1">首页</a>
+        &gt; <a href="category.html" class="list-title2">全部分类</a>
+        &gt; <a id="category" class="list-title3">手机</a> &gt;
+        <a class="select">筛选</a>
+      </div>
+
+    </div>
+
+    <!-- 下面列表内容 -->
+    <div class="product-list">
+      <ul>
+
+        <li>
+          <a href="#" class="">
+            <div class="pic">
+              <img src="" alt="苹果" width="100" height="100">
+            </div>
+            <div class="info">
+              <div class="tit">
+                苹果Apple iPhone7 Plus (A1661) 32G 玫瑰金色 全网通4G手机</div>
+              <div class="price">
+                <em>￥6388.00</em>
+                <span class="star"><em class="star5"></em></span>
+              </div>
+              <div class="other">
+                <em>报价(7)</em> <em data-v-85d8570e="">评论(39)</em>
+              </div>
+            </div>
+          </a>
+        </li>
+
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- ===========================分割线================================================== -->
+    <!-- 更多内容 -->
+    <div class="mm_content_more">
+      <ul class="clearfix">
+        <li><button class="btn">上一页</button></li>
+        <li><select name="" id="sel">
+            <option value="1">1/15</option>
+            <option value="1">1/15</option>
+            <option value="1">1/15</option>
+            <option value="1">1/15</option>
+            <option value="1">1/15</option>
+            <option value="1">1/15</option>
+          </select></li>
+        <li><button class="btn">下一页</button></li>
+      </ul>
+    </div>
+    <!-- 底部部分 -->
+    <div class="mm_footer">
+      <ul class="clearfix">
+        <li width=30%><a href="javascript:;">登录</a></li>
+        <li width=30%><a href="javascript:;">注册</a></li>
+        <li width=40%><a href="#"><img src="./img/top.jpg" alt="">返回顶部
+          </a></li>
+      </ul>
+      <div class="f_footer">
+        <p><a href="" class="app">手机APP下载</a> <a href="">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+
+<script type="text/template" id="aTmp">
+  <div class="aList">
+      {{each result v i }}
+    
+      <a href="index.html" class="list-title1">首页</a>
+      &gt; <a href="category.html" class="list-title2">全部分类</a>
+      &gt; <a id="category" class="list-title3">{{v.category}}</a> &gt;
+      <a class="select">筛选</a>
+      {{/each}}
+    </div>
+</script>
+
+<script type="text/template" id="listTmp">
+  <ul class="clearfix">
+      {{each result v i }}
+      <ul>
+        
+          <li>
+            <a href="bijia.html?categoryid={{v.categoryId}}&productid={{v.productId}}">
+              <div class="pic">
+               {{# v.productImg}}
+              </div>
+              <div class="info">
+                <div class="tit">
+                  {{v.productName}}
+                </div>
+                <div class="price">
+                  <em>{{v.productPrice}}</em>
+                  <span class="star"><em class="star5"></em></span>
+                </div>
+                <div class="other">
+                  <em>{{v.productQuote}}</em> <em data-v-85d8570e="">{{v.productCom}}</em>
+                </div>
+              </div>
+            </a>
+          </li>
+  
+  
+        </ul>
+      {{/each}}
+    </ul>
+  
+  </script>
+
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productlist.js"></script>
+
+</html>
